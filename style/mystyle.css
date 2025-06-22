@@ -1,0 +1,25 @@
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+p{
+    color: black;
+    color: #2ce062;
+    color: rgb(red, green, blue);
+    background-color: rgb(110, 44, 105);
+}
+.caja{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../Imagenes/arbol.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cajas{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../Imagenes/camping.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

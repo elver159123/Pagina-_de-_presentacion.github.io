@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Portafolio - Andy Yanacallo</title>
+    <title>Portafolio - Andy Yanacallo</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Font Awesome para íconos -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -47,10 +47,33 @@
         background-color: #f8f9fa;
         padding: 50px 0;
       }
+      .section-title {
+        margin-bottom: 50px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: #333;
+      }
+      /* Estilos para las nuevas secciones */
+      .web-project {
+        margin-bottom: 60px;
+      }
+      .web-project img {
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+      }
     </style>
   </head>
   <body>
-    <!-- Barra de navegación -->
+    <!-- Barra de navegación actualizada -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">ANDY YANACALLO</a>
@@ -65,7 +88,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#work">Proyectos</a>
+              <a class="nav-link" href="#apps">Apps Móviles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#flexbox-consulta">Consulta Flexbox</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ia-web">Web con IA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#flexbox-sapitos">Flexbox Sapitos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#crud-web">Web CRUD</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">Sobre mí</a>
@@ -81,16 +116,16 @@
     <!-- Sección Hero -->
     <section class="hero-section">
       <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-4">Desarrollo de Aplicaciones Móviles</h1>
-        <p class="lead mb-5">Creando soluciones tecnológicas innovadoras</p>
-        <a href="#work" class="btn btn-dark btn-lg">Ver mis proyectos</a>
+        <h1 class="display-4 fw-bold mb-4">Desarrollador Full Stack</h1>
+        <p class="lead mb-5">Creando soluciones web y móviles innovadoras</p>
+        <a href="#apps" class="btn btn-dark btn-lg">Ver mis proyectos</a>
       </div>
     </section>
 
-    <!-- Sección de Proyectos -->
-    <section id="work" class="py-5">
+    <!-- Sección de Apps Móviles -->
+    <section id="apps" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Mis Proyectos</h2>
+        <h2 class="text-center section-title">Aplicaciones Móviles</h2>
         <div class="row">
           <!-- Proyecto 1 -->
           <div class="col-md-6 col-lg-4">
@@ -98,7 +133,7 @@
               <img
                 src="./imagenes/logo.png"
                 class="project-img card-img-top"
-                alt="Proyecto 1"
+                alt="Kitchwa Traductor"
               />
               <div class="card-body">
                 <h5 class="card-title">Kitchwa Traductor App</h5>
@@ -118,14 +153,12 @@
               <img
                 src="./imagenes/citas.jpg"
                 class="project-img card-img-top"
-                alt="Proyecto 2"
+                alt="Citas Médicas"
               />
               <div class="card-body">
                 <h5 class="card-title">Citas Médicas App</h5>
                 <p class="card-text">
                   Prototipo de aplicación móvil para gestión de citas médicas.
-                  Permite explorar categorías médicas, ver doctores destacados,
-                  registrarse y gestionar citas.
                 </p>
                 <a href="https://github.com/elver159123" target="_blank" class="btn btn-outline-dark">Ver en GitHub</a>
               </div>
@@ -138,13 +171,12 @@
               <img
                 src="./imagenes/climapp.png"
                 class="project-img card-img-top"
-                alt="Proyecto 3"
+                alt="Clima App"
               />
               <div class="card-body">
                 <h5 class="card-title">Clima App</h5>
                 <p class="card-text">
-                  Aplicación móvil Android que muestra el clima actual y
-                  pronóstico en tiempo real utilizando la API de OpenWeather.
+                  Aplicación móvil Android que muestra el clima actual utilizando API de OpenWeather.
                 </p>
                 <a href="https://github.com/elver159123" target="_blank" class="btn btn-outline-dark">Ver en GitHub</a>
               </div>
@@ -154,7 +186,91 @@
       </div>
     </section>
 
-    <!-- Sección Sobre Mí -->
+    <!-- Nueva Sección: Página web consulta flex box y css grid -->
+    <section id="flexbox-consulta" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center section-title">Consulta Flexbox y CSS Grid</h2>
+        <div class="web-project">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img src="./imagenes/flexbox-consulta.jpg" alt="Consulta Flexbox y CSS Grid" class="img-fluid rounded">
+            </div>
+            <div class="col-lg-6">
+              <h3>Página de Consulta sobre Flexbox y CSS Grid</h3>
+              <p>Página web educativa que explica los conceptos fundamentales de Flexbox y CSS Grid, con ejemplos interactivos y comparativas entre ambas tecnologías.</p>
+              <p><strong>Tecnologías utilizadas:</strong> HTML5, CSS3, JavaScript</p>
+              <a href="#" class="btn btn-dark">Ver Proyecto</a>
+              <a href="#" class="btn btn-outline-dark">Código en GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nueva Sección: Página web utilizando IA -->
+    <section id="ia-web" class="py-5">
+      <div class="container">
+        <h2 class="text-center section-title">Página Web con IA</h2>
+        <div class="web-project">
+          <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <img src="./imagenes/ia-web.jpg" alt="Página Web con IA" class="img-fluid rounded">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <h3>Integración de IA en Web</h3>
+              <p>Sitio web que incorpora inteligencia artificial para personalizar la experiencia del usuario, con recomendaciones basadas en comportamiento y generación de contenido dinámico.</p>
+              <p><strong>Tecnologías utilizadas:</strong> React.js, TensorFlow.js, Node.js</p>
+              <a href="#" class="btn btn-dark">Ver Proyecto</a>
+              <a href="#" class="btn btn-outline-dark">Código en GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nueva Sección: Página web flex box (sapitos) -->
+    <section id="flexbox-sapitos" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center section-title">Flexbox Sapitos</h2>
+        <div class="web-project">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img src="./imagenes/flexbox-sapitos.jpg" alt="Flexbox Sapitos" class="img-fluid rounded">
+            </div>
+            <div class="col-lg-6">
+              <h3>Juego Educativo con Flexbox</h3>
+              <p>Página web interactiva que enseña los conceptos de Flexbox a través de un juego con sapitos que deben ser posicionados correctamente usando propiedades de Flexbox.</p>
+              <p><strong>Tecnologías utilizadas:</strong> HTML5, CSS3 Flexbox, JavaScript</p>
+              <a href="#" class="btn btn-dark">Ver Proyecto</a>
+              <a href="#" class="btn btn-outline-dark">Código en GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nueva Sección: Página web (crud) -->
+    <section id="crud-web" class="py-5">
+      <div class="container">
+        <h2 class="text-center section-title">Sistema CRUD Web</h2>
+        <div class="web-project">
+          <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <img src="./imagenes/crud-web.jpg" alt="Sistema CRUD Web" class="img-fluid rounded">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <h3>Aplicación CRUD Completa</h3>
+              <p>Sistema web completo con operaciones CRUD (Crear, Leer, Actualizar, Eliminar) conectado a una base de datos, con autenticación de usuarios y panel de administración.</p>
+              <p><strong>Tecnologías utilizadas:</strong> React.js, Express.js, MongoDB</p>
+              <a href="#" class="btn btn-dark">Ver Proyecto</a>
+              <a href="#" class="btn btn-outline-dark">Código en GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Sobre Mí (existente) -->
     <section id="about" class="py-5 bg-light">
       <div class="container">
         <div class="row align-items-center">
@@ -168,16 +284,10 @@
           <div class="col-lg-6 mt-4 mt-lg-0">
             <h2 class="mb-4">Sobre Mí</h2>
             <p>
-              Hola, soy Andy Yanacallo. Desarrollador móvil con pasión por crear
-              aplicaciones innovadoras y funcionales.
+              Desarrollador Full Stack con especialización en aplicaciones móviles y web.
             </p>
             <p>
-              Tengo experiencia en desarrollo de aplicaciones Android utilizando
-              tecnologías modernas y buenas prácticas de programación.
-            </p>
-            <p>
-              Mi objetivo es crear soluciones tecnológicas que resuelvan
-              problemas reales y mejoren la experiencia de los usuarios.
+              Experiencia en tecnologías modernas como React, Node.js, Flutter y bases de datos SQL/NoSQL.
             </p>
             <div class="mt-4">
               <a href="#" class="btn btn-dark me-2">Descargar CV</a>
@@ -188,10 +298,10 @@
       </div>
     </section>
 
-    <!-- Sección de Contacto -->
+    <!-- Sección de Contacto (existente) -->
     <section id="contact" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Contacto</h2>
+        <h2 class="text-center section-title">Contacto</h2>
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <form>
@@ -247,7 +357,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (existente) -->
     <footer class="footer text-center">
       <div class="container">
         <p class="mb-4">© 2023 Andy Yanacallo. Todos los derechos reservados.</p>
