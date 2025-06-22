@@ -1,0 +1,148 @@
+/* Reset y base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(to right, #004d7a, #ff6f00);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: #f0f0f0;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #ff6f00;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #004d7a;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #ff6f00;
+  color: white;
+}
+
+/* Contenido principal */
+main.content {
+  padding: 30px 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+main h2 {
+  color: #004d7a;
+  margin-top: 40px;
+}
+
+/* Cuadro de código */
+.code-box {
+  background-color: #f8f8f8;
+  border-left: 4px solid #ff6f00;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 15px 0;
+  overflow-x: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+pre {
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.95em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Área de práctica */
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #fdfdfd;
+}
+
+/* Botón */
+button {
+  background-color: #ff6f00;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e65100;
+}
+
+/* Iframe */
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 2px solid #004d7a;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+/* Footer */
+footer {
+  background-color: #004d7a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  main.content {
+    padding: 20px;
+  }
+}

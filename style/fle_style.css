@@ -1,0 +1,236 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #2980b9; /* Azul para títulos de sección */
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #34495e; /* Gris oscuro para subtítulos */
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.code-snippet {
+    background-color: #e8f0f3;
+    padding: 10px 15px;
+    border-left: 5px solid #2980b9;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: #4a6c8e;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Permite scroll si el código es muy largo */
+}
+
+.code-snippet code {
+    white-space: nowrap; /* Evita que el código se rompa en varias líneas */
+}
+
+/* Estilos para Flexbox */
+.flex-container {
+    display: flex;
+    border: 2px dashed #9b59b6; /* Morado claro para Flexbox */
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 120px;
+    border-radius: 8px;
+    background-color: #f8f0fc;
+}
+
+.flex-item {
+    background-color: #9b59b6;
+    color: #fff;
+    padding: 15px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    flex-shrink: 0; /* Evita que los ítems se encojan */
+}
+
+/* Flexbox - Ejemplo 1: Centrar */
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-item.item-a {
+    background-color: #3498db;
+}
+
+/* Flexbox - Ejemplo 2: Distribución */
+.flex-distribute {
+    justify-content: space-around;
+}
+.flex-item.item-b { background-color: #27ae60; }
+.flex-item.item-c { background-color: #e67e22; }
+.flex-item.item-d { background-color: #f39c12; }
+
+/* Flexbox - Ejemplo 3: Orden */
+.flex-order {
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan si no hay espacio */
+}
+.flex-item.item-e { background-color: #c0392b; }
+.flex-item.item-f { background-color: #8e44ad; }
+.flex-item.item-g { background-color: #1abc9c; }
+
+
+/* Estilos para CSS Grid */
+.grid-container {
+    display: grid;
+    border: 2px dashed #27ae60; /* Verde oscuro para Grid */
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 200px;
+    border-radius: 8px;
+    background-color: #e6f7ef;
+}
+
+.grid-item {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 15px;
+    margin: 2px; /* Margen más pequeño para Grid */
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: flex; /* Para centrar texto dentro de los ítems de Grid */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid - Ejemplo 1: Layout básico */
+.grid-basic {
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: una flexible, una doble, una flexible */
+    grid-template-rows: auto 1fr auto; /* Filas: alto automático, una flexible, alto automático */
+    gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+}
+.grid-item.grid-a { background-color: #e74c3c; grid-column: 1 / -1; /* Ocupa todas las columnas */ } /* Header */
+.grid-item.grid-b { background-color: #3498db; } /* Sidebar */
+.grid-item.grid-c { background-color: #9b59b6; } /* Main Content */
+.grid-item.grid-d { background-color: #f39c12; grid-column: 1 / -1; } /* Footer */
+
+/* Grid - Ejemplo 2: grid-template-areas */
+.grid-areas {
+    grid-template-columns: 1fr 2fr; /* Dos columnas */
+    grid-template-rows: auto 1fr 1fr auto; /* Cuatro filas */
+    grid-template-areas:
+        "header-area header-area"
+        "nav-area main-area"
+        "aside-area main-area" /* Modificado: aside-area ahora está debajo de nav-area y al lado de main-area */
+        "footer-area footer-area";
+    gap: 10px;
+}
+.header-area { background-color: #e74c3c; grid-area: header-area; }
+.nav-area { background-color: #3498db; grid-area: nav-area; }
+.main-area { background-color: #9b59b6; grid-area: main-area; }
+.aside-area { background-color: #1abc9c; grid-area: aside-area; }
+.footer-area { background-color: #f39c12; grid-area: footer-area; }
+
+/* Grid - Ejemplo 3: Colocar elementos con líneas */
+.grid-lines {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    gap: 10px;
+}
+.grid-item.line-1 { background-color: #e74c3c; }
+.grid-item.line-2 { background-color: #3498db; grid-column: 2 / 4; /* Comienza en la línea 2 y termina en la línea 4, abarcando 2 columnas */ }
+.grid-item.line-3 { background-color: #9b59b6; }
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-size: 0.9em;
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .flex-container, .grid-container {
+        flex-direction: column; /* Apila los ítems en Flexbox para móviles */
+        min-height: auto;
+    }
+
+    .grid-basic, .grid-areas, .grid-lines {
+        grid-template-columns: 1fr; /* Una sola columna para Grid en móviles */
+        grid-template-rows: auto;
+        grid-template-areas: none; /* Desactivar áreas para que no haya conflictos */
+    }
+
+    /* Ajustar los items en Grid para que se apilen en móvil */
+    .grid-item {
+        grid-column: auto !important; /* Desactivar spans de columna específicos */
+        grid-row: auto !important; /* Desactivar spans de fila específicos */
+        margin-bottom: 10px;
+    }
+
+    /* Volver a definir las áreas para móvil si se desea un orden específico,
+       o simplemente dejarlos que se apilen con grid-template-columns: 1fr; */
+    .grid-areas .header-area, .grid-areas .nav-area, .grid-areas .main-area, .grid-areas .aside-area, .grid-areas .footer-area {
+        grid-area: unset; /* Restablecer el área para que se organicen automáticamente */
+    }
+}

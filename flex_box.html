@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox y CSS Grid: Consulta Rápida</title>
+    <link rel="stylesheet" href="./style/fle_style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Flexbox y CSS Grid: Tu Guía Rápida</h1>
+        <p>Entendiendo las herramientas clave para layouts en CSS</p>
+    </header>
+
+    <main>
+        <section class="flexbox-section">
+            <h2>Flexbox: Diseño en una Dimensión (Filas o Columnas)</h2>
+            <p><strong>Flexbox</strong> es ideal para alinear elementos en una sola dimensión, ya sea en una fila o en una columna. Piensa en él para barras de navegación, componentes de tarjetas o distribución de elementos dentro de un área más pequeña.</p>
+
+            <h3>Ejemplo 1: Centrar un elemento</h3>
+            <div class="flex-container flex-center">
+                <div class="flex-item item-a">Centro</div>
+            </div>
+            <p class="code-snippet">CSS: <code>display: flex; justify-content: center; align-items: center;</code></p>
+
+            <h3>Ejemplo 2: Distribución de elementos</h3>
+            <div class="flex-container flex-distribute">
+                <div class="flex-item item-b">Item 1</div>
+                <div class="flex-item item-c">Item 2</div>
+                <div class="flex-item item-d">Item 3</div>
+            </div>
+            <p class="code-snippet">CSS: <code>display: flex; justify-content: space-around;</code></p>
+
+            <h3>Ejemplo 3: Orden de los elementos</h3>
+            <div class="flex-container flex-order">
+                <div class="flex-item item-e" style="order: 3;">Primero</div>
+                <div class="flex-item item-f" style="order: 1;">Segundo</div>
+                <div class="flex-item item-g" style="order: 2;">Tercero</div>
+            </div>
+            <p class="code-snippet">CSS: <code>order: [número];</code> (aplicado a los ítems flex)</p>
+        </section>
+
+        ---
+
+        <section class="grid-section">
+            <h2>CSS Grid: Diseño en Dos Dimensiones (Filas y Columnas)</h2>
+            <p><strong>CSS Grid</strong> te permite diseñar layouts complejos en dos dimensiones, gestionando tanto filas como columnas a la vez. Es perfecto para la estructura general de tu página, un dashboard o un diseño de galería de imágenes.</p>
+
+            <h3>Ejemplo 1: Layout básico de 3 columnas</h3>
+            <div class="grid-container grid-basic">
+                <div class="grid-item grid-a">Header</div>
+                <div class="grid-item grid-b">Sidebar</div>
+                <div class="grid-item grid-c">Contenido Principal</div>
+                <div class="grid-item grid-d">Footer</div>
+            </div>
+            <p class="code-snippet">CSS: <code>display: grid; grid-template-columns: 1fr 2fr 1fr; grid-template-rows: auto 1fr auto;</code></p>
+
+            <h3>Ejemplo 2: Uso de `grid-template-areas`</h3>
+            <div class="grid-container grid-areas">
+                <div class="grid-item header-area">Encabezado</div>
+                <div class="grid-item nav-area">Navegación</div>
+                <div class="grid-item main-area">Contenido</div>
+                <div class="grid-item aside-area">Publicidad</div>
+                <div class="grid-item footer-area">Pie de Página</div>
+            </div>
+            <p class="code-snippet">CSS: <code>grid-template-areas: "header header" "nav main" "nav aside" "footer footer";</code></p>
+
+            <h3>Ejemplo 3: Colocar elementos con líneas (line-based placement)</h3>
+            <div class="grid-container grid-lines">
+                <div class="grid-item line-1">Item A</div>
+                <div class="grid-item line-2">Item B (2 columnas)</div>
+                <div class="grid-item line-3">Item C</div>
+            </div>
+            <p class="code-snippet">CSS: <code>grid-column: 1 / 3;</code> (para Item B)</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Andy Yanacallo TSDS 4TO</p>
+    </footer>
+
+</body>
+</html>

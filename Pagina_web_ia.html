@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Web Hecha con IA</title>
+  <link rel="stylesheet" href="./style/Pagina_web_ia.css" />
+</head>
+<body>
+  <header>
+    <h1>Página Web Hecha con IA</h1>
+    <p>Aprende Programación Web con HTML y CSS desde cero</p>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#html">¿Qué es HTML?</a></li>
+      <li><a href="#css">¿Qué es CSS?</a></li>
+      <li><a href="#grid">¿Qué es CSS Grid?</a></li>
+      <li><a href="#practica">Prácticas</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <section>
+      <h2 id="html">¿Qué es HTML?</h2>
+      <p>HTML (HyperText Markup Language) es el lenguaje estándar para estructurar páginas web. Utiliza etiquetas para definir elementos como títulos, párrafos, imágenes, enlaces y más.</p>
+      <div class="code-box">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Mi primera página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;¡Hola Mundo!&lt;/h1&gt;
+    &lt;p&gt;Este es un párrafo en HTML.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="css">¿Qué es CSS?</h2>
+      <p>CSS (Cascading Style Sheets) se utiliza para aplicar estilos a las páginas web, como colores, tamaños de texto, márgenes, alineaciones y más.</p>
+      <div class="code-box">
+        <pre><code>body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="grid">¿Qué es CSS Grid?</h2>
+      <p>CSS Grid Layout es una técnica avanzada de diseño que permite organizar elementos en filas y columnas de forma sencilla y flexible.</p>
+      <div class="code-box">
+        <pre><code>.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}</code></pre>
+      </div>
+      <p>Con CSS Grid puedes crear diseños adaptables y organizados para tus páginas web modernas.</p>
+    </section>
+
+    <section>
+      <h2 id="practica">Prácticas</h2>
+      <p>Escribe tu código HTML en el área de texto a continuación y haz clic en "Ver Resultado" para ver cómo se muestra:</p>
+      <textarea id="codigo-html" rows="10">&lt;h1&gt;Hola desde el editor&lt;/h1&gt;
+&lt;p&gt;Este es un ejemplo práctico.&lt;/p&gt;</textarea>
+      <br /><br />
+      <button onclick="mostrarResultado()">Ver Resultado</button>
+      <br /><br />
+      <iframe id="resultado"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Página creada con ayuda de IA para estudiantes de desarrollo web</p>
+  </footer>
+
+  <script>
+    function mostrarResultado() {
+      const codigo = document.getElementById("codigo-html").value;
+      const iframe = document.getElementById("resultado");
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(codigo);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
