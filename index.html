@@ -17,10 +17,11 @@
     <style>
       /* Estilos personalizados */
       .img-uniforme {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
       body {
         font-family: "Helvetica Neue", Arial, sans-serif;
         color: #333;
@@ -58,7 +59,7 @@
         padding-bottom: 15px;
       }
       .section-title::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -117,28 +118,54 @@
         </div>
       </div>
     </nav>
-      <!-- Carrusel -->
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./Imagenes/arbol.jpeg" class="d-block w-100 img-uniforme" alt="Imagen 1" />
+    <!-- Carrusel -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./Imagenes/arbol.jpeg"
+            class="d-block w-100 img-uniforme"
+            alt="Imagen 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./Imagenes/camping.jpg"
+            class="d-block w-100 img-uniforme"
+            alt="Imagen 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./Imagenes/rosa.jpeg"
+            class="d-block w-100 img-uniforme"
+            alt="Imagen 3"
+          />
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="./Imagenes/camping.jpg" class="d-block w-100 img-uniforme" alt="Imagen 2" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Imagenes/rosa.jpeg" class="d-block w-100 img-uniforme" alt="Imagen 3" />
-      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
 
     <!-- Sección Hero -->
     <section class="hero-section">
@@ -169,7 +196,12 @@
                   kichwa, integrando autenticación de usuarios, base de datos en
                   tiempo real y reproducción de audios.
                 </p>
-                <a href="https://github.com/elver159123" target="_blank" class="btn btn-outline-dark">Ver en GitHub</a>
+                <a
+                  href="https://github.com/elver159123"
+                  target="_blank"
+                  class="btn btn-outline-dark"
+                  >Ver en GitHub</a
+                >
               </div>
             </div>
           </div>
@@ -187,7 +219,12 @@
                 <p class="card-text">
                   Prototipo de aplicación móvil para gestión de citas médicas.
                 </p>
-                <a href="https://github.com/elver159123" target="_blank" class="btn btn-outline-dark">Ver en GitHub</a>
+                <a
+                  href="https://github.com/elver159123"
+                  target="_blank"
+                  class="btn btn-outline-dark"
+                  >Ver en GitHub</a
+                >
               </div>
             </div>
           </div>
@@ -203,9 +240,15 @@
               <div class="card-body">
                 <h5 class="card-title">Clima App</h5>
                 <p class="card-text">
-                  Aplicación móvil Android que muestra el clima actual utilizando API de OpenWeather.
+                  Aplicación móvil Android que muestra el clima actual
+                  utilizando API de OpenWeather.
                 </p>
-                <a href="https://github.com/elver159123" target="_blank" class="btn btn-outline-dark">Ver en GitHub</a>
+                <a
+                  href="https://github.com/elver159123"
+                  target="_blank"
+                  class="btn btn-outline-dark"
+                  >Ver en GitHub</a
+                >
               </div>
             </div>
           </div>
@@ -220,12 +263,22 @@
         <div class="web-project">
           <div class="row align-items-center">
             <div class="col-lg-6">
-              <img src="./imagenes/flexgrid.png" alt="Consulta Flexbox y CSS Grid" class="img-fluid rounded">
+              <img
+                src="./imagenes/flexgrid.png"
+                alt="Consulta Flexbox y CSS Grid"
+                class="img-fluid rounded"
+              />
             </div>
             <div class="col-lg-6">
               <h3>Página de Consulta sobre Flexbox y CSS Grid</h3>
-              <p>Página web educativa que explica los conceptos fundamentales de Flexbox y CSS Grid, con ejemplos interactivos y comparativas entre ambas tecnologías.</p>
-              <p><strong>Tecnologías utilizadas:</strong> HTML5, CSS3, JavaScript</p>
+              <p>
+                Página web educativa que explica los conceptos fundamentales de
+                Flexbox y CSS Grid, con ejemplos interactivos y comparativas
+                entre ambas tecnologías.
+              </p>
+              <p>
+                <strong>Tecnologías utilizadas:</strong> HTML5, CSS3, JavaScript
+              </p>
               <a href="./flex_box.html" class="btn btn-dark">Ver pagina web</a>
             </div>
           </div>
@@ -240,13 +293,25 @@
         <div class="web-project">
           <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2">
-              <img src="./imagenes/paginaia.png" alt="Página Web con IA" class="img-fluid rounded">
+              <img
+                src="./imagenes/paginaia.png"
+                alt="Página Web con IA"
+                class="img-fluid rounded"
+              />
             </div>
             <div class="col-lg-6 order-lg-1">
               <h3>Integración de IA en Web</h3>
-              <p>Sitio web que incorpora inteligencia artificial para personalizar la experiencia del usuario, con recomendaciones basadas en comportamiento y generación de contenido dinámico.</p>
-              <p><strong>Tecnologías utilizadas:</strong> Html, Css y chatgpt</p>
-              <a href="./Pagina_web_ia.html" class="btn btn-dark">Ver Pagina Web</a>
+              <p>
+                Sitio web que incorpora inteligencia artificial para
+                personalizar la experiencia del usuario, con recomendaciones
+                basadas en comportamiento y generación de contenido dinámico.
+              </p>
+              <p>
+                <strong>Tecnologías utilizadas:</strong> Html, Css y chatgpt
+              </p>
+              <a href="./Pagina_web_ia.html" class="btn btn-dark"
+                >Ver Pagina Web</a
+              >
             </div>
           </div>
         </div>
@@ -260,13 +325,19 @@
         <div class="web-project">
           <div class="row align-items-center">
             <div class="col-lg-6">
-              <img src="./imagenes/Flexbox_Froggy.png" alt="Flexbox Sapitos" class="img-fluid rounded">
+              <img
+                src="./imagenes/Flexbox_Froggy.png"
+                alt="Flexbox Sapitos"
+                class="img-fluid rounded"
+              />
             </div>
             <div class="col-lg-6">
               <h3>Juego Educativo con Flexbox</h3>
               <p>Captura de todos los niveles pasados aplicando flexbox</p>
               <p><strong>Tecnologías utilizadas:</strong> html, flexbox</p>
-              <a href="./clase_flexbox.html" class="btn btn-dark">Ver Capturas</a>
+              <a href="./clase_flexbox.html" class="btn btn-dark"
+                >Ver Capturas</a
+              >
             </div>
           </div>
         </div>
@@ -280,14 +351,28 @@
         <div class="web-project">
           <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2">
-              <img src="./imagenes/CRUD.png" alt="Sistema CRUD Web" class="img-fluid rounded">
+              <img
+                src="./imagenes/CRUD.png"
+                alt="Sistema CRUD Web"
+                class="img-fluid rounded"
+              />
             </div>
             <div class="col-lg-6 order-lg-1">
               <h3>Aplicación CRUD Completa</h3>
-              <p>Sistema web completo con operaciones CRUD (Crear, Leer, Actualizar, Eliminar) conectado a una base de datos, panel de administración.</p>
+              <p>
+                Sistema web completo con operaciones CRUD (Crear, Leer,
+                Actualizar, Eliminar) conectado a una base de datos, panel de
+                administración.
+              </p>
               <p><strong>Tecnologías utilizadas:</strong> HTML, PHP, SQL</p>
-              <a href="https://ayanacallo.42web.io/" class="btn btn-dark">Ver CRUD</a>
-              <a href="https://github.com/elver159123/CRUD.git" class="btn btn-outline-dark">Código en GitHub</a>
+              <a href="https://ayanacallo.42web.io/" class="btn btn-dark"
+                >Ver CRUD</a
+              >
+              <a
+                href="https://github.com/elver159123/CRUD.git"
+                class="btn btn-outline-dark"
+                >Código en GitHub</a
+              >
             </div>
           </div>
         </div>
@@ -308,10 +393,12 @@
           <div class="col-lg-6 mt-4 mt-lg-0">
             <h2 class="mb-4">Sobre Mí</h2>
             <p>
-              Desarrollador Full Stack con especialización en aplicaciones móviles y web.
+              Desarrollador Full Stack con especialización en aplicaciones
+              móviles y web.
             </p>
             <p>
-              Experiencia en tecnologías modernas como React, Node.js, Flutter y bases de datos SQL/NoSQL.
+              Experiencia en tecnologías modernas como React, Node.js, Flutter y
+              bases de datos SQL/NoSQL.
             </p>
             <div class="mt-4">
               <a href="#" class="btn btn-dark me-2">Descargar CV</a>
@@ -384,11 +471,28 @@
     <!-- Footer (existente) -->
     <footer class="footer text-center">
       <div class="container">
-        <p class="mb-4">© 2023 Andy Yanacallo. Todos los derechos reservados.</p>
+        <p class="mb-4">
+          © 2023 Andy Yanacallo. Todos los derechos reservados.
+        </p>
         <div class="social-icons">
-          <a href="https://www.facebook.com/esteban.electronick" target="_blank" class="text-dark mx-2"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.linkedin.com/in/andy-yanacallo-andy-yanacallo-67838b368/" target="_blank" class="text-dark mx-2"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/elver159123" target="_blank" class="text-dark mx-2"><i class="fab fa-github"></i></a>
+          <a
+            href="https://www.facebook.com/esteban.electronick"
+            target="_blank"
+            class="text-dark mx-2"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/andy-yanacallo-andy-yanacallo-67838b368/"
+            target="_blank"
+            class="text-dark mx-2"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/elver159123"
+            target="_blank"
+            class="text-dark mx-2"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
       </div>
     </footer>
